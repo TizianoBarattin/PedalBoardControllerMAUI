@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiController.MainPage"
+             x:Name="HomePage"
+             BindingContext="{x:Reference HomePage}"
+             BackgroundColor="WhiteSmoke"
+             xmlns:control="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+             xmlns:local="clr-namespace:MauiController">
+
+
+    <ContentPage.ToolbarItems>
+        <!--<ImageButton Source="setting.png" Clicked="OnSettingClicked"/>-->
+        <ToolbarItem Text="Settings"  IconImageSource="setting.png" />
+        <!--Clicked="OnSettingClicked" />-->
+    </ContentPage.ToolbarItems>
+
+    <ScrollView> 
+        
+        <!--MIDI INPUT/OUTPUT SELECTION-->
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <Label Text="General I/O Settings" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" FontSize="25"></Label>
+            <HorizontalStackLayout       
+                Padding="30,0"
+                Spacing="5"
+                HorizontalOptions="Center"
+                VerticalOptions="Start">
+
+                    <HorizontalStackLayout Padding="30" Spacing="20" HorizontalOptions="Start">
+                        <Label Text="Midi Input Device" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" FontSize="18">
+                        </Label>
+                        <control:SfComboBox 
+                            x:Name="cbMidiInputs" 
+                            HeightRequest="60" 
+                            WidthRequest="300" 
+                            MaxDropDownHeight="300" 
+                            DisplayMemberPath="" 
+                            TextMemberPath=""
+                            Placeholder="Select a Device"
+                            SelectionChanged="OnMidiInputSelectionChange"
+                            IsClearButtonVisible="True">
+                        </control:SfComboBox>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Padding="30" Spacing="20">
+                        <Label Text="Midi Output Device" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" FontSize="18">
+                        </Label>
+                        <control:SfComboBox 
+                            x:Name="cbMidiOutputs" 
+                            HeightRequest="60" 
+                            WidthRequest="300" 
+                            MaxDropDownHeight="300" 
+                            DisplayMemberPath="" 
+                            TextMemberPath=""
+                            Placeholder="Select a Device"
+                            SelectionChanged="OnMidiOutputSelectionChange"
+                            IsClearButtonVisible="True">
+                        </control:SfComboBox>
+                    </HorizontalStackLayout>
+            </HorizontalStackLayout>
+
+            <Label Text="Pedalboard Modules" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" FontSize="25"></Label>
+            <ImageButton WidthRequest="200" CornerRadius="10" Padding="10" HeightRequest="50" Clicked="AddModuleClicked" BackgroundColor="LightGreen" Source="add.png" x:Name="AddModuleButton"></ImageButton>
+        </VerticalStackLayout>
+
+
+    </ScrollView>
+    
+
+</ContentPage>
