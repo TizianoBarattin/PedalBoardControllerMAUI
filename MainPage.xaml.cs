@@ -1,13 +1,14 @@
-﻿using PedalBoardController;
-using PedalBoardController.Classes;
-using PedalBoardController.Classes.Modules;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Reflection;
 using Newtonsoft.Json;
 using NAudio;
 using NAudio.Midi;
 using Commons.Music.Midi;
 using CommunityToolkit.Maui.Views;
+using MauiController.Pages.ModulesPages;
+using MauiController.Classes;
+using MauiController.Classes.Configurations;
+using MauiController.Classes.Modules;
 
 
 namespace MauiController
@@ -15,6 +16,8 @@ namespace MauiController
     public partial class MainPage : ContentPage
     {
         int count = 0;
+
+        string ProjectName = "MauiController";
 
         MidiInterface midiInterface = new MidiInterface();
         public List<Modules> pedalboardModules { get; private set; } = new List<Modules>();
@@ -53,11 +56,8 @@ namespace MauiController
             }
         }
 
-
         //public bool timeElapsed = false;
         //public byte[] midiReceived { get; private set; }
-
-
 
         public void InitializeMidiInputs()
         {
@@ -171,49 +171,6 @@ namespace MauiController
             return modules;
         }
 
-        //public bool SendControlChange(decimal channel, int controlNumber, int value)
-        //{
-        //    bool res = midiInterface.SendControlChange(channel, controlNumber, value, config.MidiOutput, true);
-        //    if (!res)
-        //    {
-        //        MessageBox.Show("Some problems sending the midi message!"); //TODO: se problemi non segnare come ben letto/scrivere "error" sul nome programma
-        //    }
-        //    return res;
-        //}
-
-        //public bool SendSysEx(byte[] data)
-        //{
-        //    bool res = midiInterface.SendSysEx(config.MidiOutput, true, data);
-        //    if (!res)
-        //    {
-        //        MessageBox.Show("Some problems sending the program!"); //TODO: se problemi non segnare come ben letto/scrivere "error" sul nome programma
-        //    }
-        //    return res;
-        //}
-
-        //public byte[] ReceiveSysEx()
-        //{
-        //    byte[] result = new byte[] { };
-        //    Task<MidiEvent> midiEvent = midiInterface.ReceiveMidiData(config.MidiInput, false);
-        //    SysExEvent sysexEvent = (SysExEvent?)midiEvent.Result;
-
-        //    if (sysexEvent == null)
-        //    {
-        //        result = null;
-        //    }
-        //    else
-        //    {
-        //        result = sysexEvent.Data;
-        //    }
-
-        //    return result;
-        //}
-
-        //public void OnTimedEvent(object source, ElapsedEventArgs e)
-        //{
-        //    timeElapsed = true;
-        //}
-
         public void LoadConfig()
         {
             var dir = GetApplicationDirectoryPath();
@@ -239,21 +196,26 @@ namespace MauiController
         public void AddModule(Button senderButton, string moduleType, decimal channel, string friendlyName)
         {
             //TODO: capire come legare tab a classe e richiamare in base a quello
-            //TODO: serve fare dei controlli che esistano le classi o le tab utilizzate?
 
-            //string moduleClassName = $"PedalBoardController.Classes.Modules.{senderButton.Name}";
-            //Type classType = Type.GetType(moduleClassName);
+            string moduleClassName = $"{ProjectName}.Classes.Modules.{senderButton.StyleId}";
+            Type classType = Type.GetType(moduleClassName);
 
-            ////creo modulo in base a tipo modulo passato da form creazione
-            //object[] inputs = { this, channel, friendlyName };
-            //object newModule = Activator.CreateInstance(classType, inputs);
+            //creo modulo in base a tipo modulo passato da form creazione
+            object[] inputs = { this, channel, friendlyName };
+            object newModule = Activator.CreateInstance(classType, inputs);
         }
 
-        //public void AddTabPassedByModule(TabPage newTab, Modules newModule)
-        //{
-        //    tcMain.TabPages.Add(newTab);
-        //    pedalboardModules.Add(newModule);
-        //}
+        public void AddTabPassedByModule(ContentPage newPage, string ModuleName)
+        {
+            ShellContent shellContent = new ShellContent();
+            shellContent = newPage;
+
+            AppShell shellApp = Application.Current.MainPage as AppShell;
+            shellApp.AddMainFlyoutTab(newPage, ModuleName);
+            //AppShell.MainPageTab.AddLogicalChild(FutureImpactV3Page);
+            //tcMain.TabPages.Add(newTab);
+            //pedalboardModules.Add(newModule);
+        }
 
         //private void bRemoveSelected_Click(object sender, EventArgs e)
         //{   //TODO: legare l'index del form all'index della classe modulo
@@ -302,6 +264,50 @@ namespace MauiController
 
             return ModuleNameFree;
         }
+
+        //public bool SendControlChange(decimal channel, int controlNumber, int value)
+        //{
+        //    bool res = midiInterface.SendControlChange(channel, controlNumber, value, config.MidiOutput, true);
+        //    if (!res)
+        //    {
+        //        MessageBox.Show("Some problems sending the midi message!"); //TODO: se problemi non segnare come ben letto/scrivere "error" sul nome programma
+        //    }
+        //    return res;
+        //}
+
+        //public bool SendSysEx(byte[] data)
+        //{
+        //    bool res = midiInterface.SendSysEx(config.MidiOutput, true, data);
+        //    if (!res)
+        //    {
+        //        MessageBox.Show("Some problems sending the program!"); //TODO: se problemi non segnare come ben letto/scrivere "error" sul nome programma
+        //    }
+        //    return res;
+        //}
+
+        //public byte[] ReceiveSysEx()
+        //{
+        //    byte[] result = new byte[] { };
+        //    Task<MidiEvent> midiEvent = midiInterface.ReceiveMidiData(config.MidiInput, false);
+        //    SysExEvent sysexEvent = (SysExEvent?)midiEvent.Result;
+
+        //    if (sysexEvent == null)
+        //    {
+        //        result = null;
+        //    }
+        //    else
+        //    {
+        //        result = sysexEvent.Data;
+        //    }
+
+        //    return result;
+        //}
+
+        //public void OnTimedEvent(object source, ElapsedEventArgs e)
+        //{
+        //    timeElapsed = true;
+        //}
+
     }
 
 }

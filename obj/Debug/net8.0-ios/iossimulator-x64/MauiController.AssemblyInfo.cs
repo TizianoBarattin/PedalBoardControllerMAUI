@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MauiController")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+cba057a25af508d501aeeb4784f37184b9fbb3ff")]
 [assembly: System.Reflection.AssemblyProductAttribute("MauiController")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MauiController")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

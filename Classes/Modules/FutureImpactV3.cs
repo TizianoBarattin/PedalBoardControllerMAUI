@@ -4,18 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MauiController;
-//using PedalBoardController.Classes.TabPages;
-using PedalBoardController.Controllers;
+using MauiController.Classes.Controllers;
+using MauiController.Pages.ModulesPages;
 
-namespace PedalBoardController.Classes.Modules
+namespace MauiController.Classes.Modules
 {
-    public class FutureImpactV3: Modules
+    public class FutureImpactV3 : Modules
     {   //TODO: deve diventare una proprietà di modules
 
         private static int numOfThisModules;
         public int NumOfThisModules { get { return numOfThisModules; } }
-
-        private MainPage MainForm = null;
 
         public List<FI_Controllers> fiParams = new List<FI_Controllers>();
         public List<bool> paramChanging = new List<bool>(new bool[200]);
@@ -29,23 +27,23 @@ namespace PedalBoardController.Classes.Modules
         //PROGRAMS FOLDER NAME
         //public string defaultFolderProgramsName = Path.GetDirectoryName(Application.ExecutablePath) + "\\" + "FutureImpactPrograms"; TODO:scommenta
 
-        public FutureImpactV3(MainPage _mainForm, decimal midiChannel, string moduleFriendlyName) 
-            : base(midiChannel, moduleType, moduleFriendlyName)
+        public FutureImpactV3(MainPage _mainPage, decimal midiChannel, string moduleFriendlyName)
+            : base(midiChannel, moduleType, moduleFriendlyName, _mainPage)
         {
             numOfThisModules++;
 
             fiParams = PublicControllers();
             currentFileName = "INIT";
 
-            //CREATE FOLDER
+            //CREATE FOLDER TODO:scommenta
             //if (!Directory.Exists(defaultFolderProgramsName))
             //{
             //    Directory.CreateDirectory(defaultFolderProgramsName);
             //}
-            //
-            //Channel = midiChannel;
-            //MainForm = _mainForm;
-            //MainForm.AddTabPassedByModule(new tpageFutureImpactV3(moduleFriendlyName, Modules.NumOfModules, midiChannel, this), this); TODO: scommenta
+
+            ModulePage = new PageFutureImpactV3();
+            Channel = midiChannel;
+            MainPage.AddTabPassedByModule(ModulePage, moduleFriendlyName);
 
         }
 
@@ -59,18 +57,18 @@ namespace PedalBoardController.Classes.Modules
             //VCOs
             for (int i = 0; i < 4; i++)
             {//TODO: valori iniziali da approfondire
-                Params.Add(new FI_Controllers($"vco{i + 1}PitchCoarse",     i,  0,  (1 + (i * 12)),     5,  (0 + (i * 12)),   -24,   +48,   0));
-                Params.Add(new FI_Controllers($"vco{i + 1}PitchFine",       i,  1,  (2 + (i * 12)),     5,  (1 + (i * 12)),   -63,   +63,   0));
-                Params.Add(new FI_Controllers($"vco{i + 1}PitchBeat",       i,  2,  (3 + (i * 12)),     5,  (2 + (i * 12)),   -63,   +63,   0));
-                Params.Add(new FI_Controllers($"vco{i + 1}SawDecayTime",    i,  3,  (4 + (i * 12)),     5,  (3 + (i * 12)),     0,  +127,   0));
-                Params.Add(new FI_Controllers($"vco{i + 1}SawDecay",        i,  4,  (5 + (i * 12)),     5,  (4 + (i * 12)),   -63,   +63,   0));
-                Params.Add(new FI_Controllers($"vco{i + 1}PulseOffset",     i,  5,  (6 + (i * 12)),     5,  (5 + (i * 12)),     0,  +127,   0));
-                Params.Add(new FI_Controllers($"vco{i + 1}PulseLfoFreq",    i,  6,  (7 + (i * 12)),     5,  (6 + (i * 12)),    +1,  +127,   1,      1));
-                Params.Add(new FI_Controllers($"vco{i + 1}PulseLfoDepth",   i,  7,  (8 + (i * 12)),     5,  (7 + (i * 12)),     0,  +127,   0));
-                Params.Add(new FI_Controllers($"vco{i + 1}VolumeSaw",       i,  8,  (9 + (i * 12)),     5,  (8 + (i * 12)),     0,  +127,   0));
-                Params.Add(new FI_Controllers($"vco{i + 1}VolumeSqr",       i,  9, (10 + (i * 12)),     5,  (9 + (i * 12)),     0,  +127,   0));
-                Params.Add(new FI_Controllers($"vco{i + 1}VolumeTriang",    i, 10, (11 + (i * 12)),     5, (10 + (i * 12)),     0,  +127,   0));
-                Params.Add(new FI_Controllers($"vco{i + 1}Volume",          i, 11, (12 + (i * 12)),     5, (11 + (i * 12)),     0,  +127,   0));
+                Params.Add(new FI_Controllers($"vco{i + 1}PitchCoarse", i, 0, 1 + i * 12, 5, 0 + i * 12, -24, +48, 0));
+                Params.Add(new FI_Controllers($"vco{i + 1}PitchFine", i, 1, 2 + i * 12, 5, 1 + i * 12, -63, +63, 0));
+                Params.Add(new FI_Controllers($"vco{i + 1}PitchBeat", i, 2, 3 + i * 12, 5, 2 + i * 12, -63, +63, 0));
+                Params.Add(new FI_Controllers($"vco{i + 1}SawDecayTime", i, 3, 4 + i * 12, 5, 3 + i * 12, 0, +127, 0));
+                Params.Add(new FI_Controllers($"vco{i + 1}SawDecay", i, 4, 5 + i * 12, 5, 4 + i * 12, -63, +63, 0));
+                Params.Add(new FI_Controllers($"vco{i + 1}PulseOffset", i, 5, 6 + i * 12, 5, 5 + i * 12, 0, +127, 0));
+                Params.Add(new FI_Controllers($"vco{i + 1}PulseLfoFreq", i, 6, 7 + i * 12, 5, 6 + i * 12, +1, +127, 1, 1));
+                Params.Add(new FI_Controllers($"vco{i + 1}PulseLfoDepth", i, 7, 8 + i * 12, 5, 7 + i * 12, 0, +127, 0));
+                Params.Add(new FI_Controllers($"vco{i + 1}VolumeSaw", i, 8, 9 + i * 12, 5, 8 + i * 12, 0, +127, 0));
+                Params.Add(new FI_Controllers($"vco{i + 1}VolumeSqr", i, 9, 10 + i * 12, 5, 9 + i * 12, 0, +127, 0));
+                Params.Add(new FI_Controllers($"vco{i + 1}VolumeTriang", i, 10, 11 + i * 12, 5, 10 + i * 12, 0, +127, 0));
+                Params.Add(new FI_Controllers($"vco{i + 1}Volume", i, 11, 12 + i * 12, 5, 11 + i * 12, 0, +127, 0));
             }
 
             //First Value x VolumeSaw+Volume of VCO1
@@ -78,128 +76,128 @@ namespace PedalBoardController.Classes.Modules
             Params[12].ActualValue = 32;      //TODO: confrontare che siano uguali i due programmi sia quando apro solo uno (e manco cc) sia quando apro tanti e mando sysex
 
             //HARMONIZER
-            Params.Add(new FI_Controllers("harmVox2Shift",     4,      0,      49,       5,      48,  -2,      +5,   0,      "-12,-5,7,12,19,24"));
-            Params.Add(new FI_Controllers("harmVox3Shift",     4,      1,      50,       5,      49,  -2,      +5,   0,      "-12,-5,7,12,19,24"));
-            Params.Add(new FI_Controllers("harmInstrumVolume", 4,      2,      51,       5,      50,   0,    +127,   0));
-            Params.Add(new FI_Controllers("harmVox+1octVoulme",4,      3,      52,       5,      51,   0,    +127,   0));
-            Params.Add(new FI_Controllers("harmVox2Volume",    4,      4,      53,       5,      52,   0,    +127,   0));
-            Params.Add(new FI_Controllers("harmVox3Volume",    4,      5,      54,       5,      53,   0,    +127,   0));
+            Params.Add(new FI_Controllers("harmVox2Shift", 4, 0, 49, 5, 48, -2, +5, 0, "-12,-5,7,12,19,24"));
+            Params.Add(new FI_Controllers("harmVox3Shift", 4, 1, 50, 5, 49, -2, +5, 0, "-12,-5,7,12,19,24"));
+            Params.Add(new FI_Controllers("harmInstrumVolume", 4, 2, 51, 5, 50, 0, +127, 0));
+            Params.Add(new FI_Controllers("harmVox+1octVoulme", 4, 3, 52, 5, 51, 0, +127, 0));
+            Params.Add(new FI_Controllers("harmVox2Volume", 4, 4, 53, 5, 52, 0, +127, 0));
+            Params.Add(new FI_Controllers("harmVox3Volume", 4, 5, 54, 5, 53, 0, +127, 0));
 
             //DISTORSION
-            Params.Add(new FI_Controllers("distGrade",         4,      6,      55,       5,      54,   0,     +31,   0));
-            Params.Add(new FI_Controllers("distTone",          4,      7,      56,       5,      55,   0,    +127,   0));
+            Params.Add(new FI_Controllers("distGrade", 4, 6, 55, 5, 54, 0, +31, 0));
+            Params.Add(new FI_Controllers("distTone", 4, 7, 56, 5, 55, 0, +127, 0));
 
             //MIXER
-            Params.Add(new FI_Controllers("mixerInstrument",   5,      0,      57,       5,      56,   0,    +127,  64));
-            Params.Add(new FI_Controllers("mixerVcfLin",       5,      1,      58,       5,      57,   0,    +127,  64));
-            Params.Add(new FI_Controllers("mixerVcfLog",       5,      2,      59,       5,      58,   0,    +127,  64));
+            Params.Add(new FI_Controllers("mixerInstrument", 5, 0, 57, 5, 56, 0, +127, 64));
+            Params.Add(new FI_Controllers("mixerVcfLin", 5, 1, 58, 5, 57, 0, +127, 64));
+            Params.Add(new FI_Controllers("mixerVcfLog", 5, 2, 59, 5, 58, 0, +127, 64));
 
             //VCA ADSR
-            Params.Add(new FI_Controllers("vcaAttack",         6,      0,      60,       5,      59,   1,    +127,   1,      1));
-            Params.Add(new FI_Controllers("vcaDecay",          6,      1,      61,       5,      60,   1,    +127,   1,      1));
-            Params.Add(new FI_Controllers("vcaSustain",        6,      2,      62,       5,      61,   0,    +127, 127));
-            Params.Add(new FI_Controllers("vcaRelease",        6,      3,      63,       5,      62,   1,    +127,   1,      1));
-                                                                                                                              
+            Params.Add(new FI_Controllers("vcaAttack", 6, 0, 60, 5, 59, 1, +127, 1, 1));
+            Params.Add(new FI_Controllers("vcaDecay", 6, 1, 61, 5, 60, 1, +127, 1, 1));
+            Params.Add(new FI_Controllers("vcaSustain", 6, 2, 62, 5, 61, 0, +127, 127));
+            Params.Add(new FI_Controllers("vcaRelease", 6, 3, 63, 5, 62, 1, +127, 1, 1));
+
             //VCF ADSR                                                                                                        
-            Params.Add(new FI_Controllers("vcfAttack",         6,      4,      64,       5,      63,   1,    +127,   1,      1));
-            Params.Add(new FI_Controllers("vcfDecay",          6,      5,      65,       5,      64,   1,    +127,   1,      1));
-            Params.Add(new FI_Controllers("vcfSustain",        6,      6,      66,       5,      65,   0,    +127, 127));
-            Params.Add(new FI_Controllers("vcfRelease",        6,      7,      67,       5,      66,   1,    +127,   1,      1));
-            Params.Add(new FI_Controllers("vcaEnvelopeMode",   6,      8,      68,       5,      67,   0,      +2,   1));             //TODO:se su vintage D/S di vca e S/R di vcf sono bloccati
+            Params.Add(new FI_Controllers("vcfAttack", 6, 4, 64, 5, 63, 1, +127, 1, 1));
+            Params.Add(new FI_Controllers("vcfDecay", 6, 5, 65, 5, 64, 1, +127, 1, 1));
+            Params.Add(new FI_Controllers("vcfSustain", 6, 6, 66, 5, 65, 0, +127, 127));
+            Params.Add(new FI_Controllers("vcfRelease", 6, 7, 67, 5, 66, 1, +127, 1, 1));
+            Params.Add(new FI_Controllers("vcaEnvelopeMode", 6, 8, 68, 5, 67, 0, +2, 1));             //TODO:se su vintage D/S di vca e S/R di vcf sono bloccati
 
             //NOISE
-            Params.Add(new FI_Controllers("noiseAttack",       6,      9,      69,       5,      68,   1,    +127,   1,      1));
-            Params.Add(new FI_Controllers("noiseDecay",        6,     10,      70,       5,      69,   1,    +127,   1,      1));
+            Params.Add(new FI_Controllers("noiseAttack", 6, 9, 69, 5, 68, 1, +127, 1, 1));
+            Params.Add(new FI_Controllers("noiseDecay", 6, 10, 70, 5, 69, 1, +127, 1, 1));
 
             //VCF INPUT
-            Params.Add(new FI_Controllers("vcfInInstrument",   7,      0,      71,       5,      70,   0,    +127,   0));
-            Params.Add(new FI_Controllers("vcfInDist",         7,      1,      72,       5,      71,   0,    +127,   0));
-            Params.Add(new FI_Controllers("vcfInAirDist",      7,      2,      73,       5,      72,   0,    +127,   0));
-            Params.Add(new FI_Controllers("vcfInSynth",        7,      3,      74,       5,      73,   0,    +127,  64));
-            Params.Add(new FI_Controllers("vcfInNoise",        7,      4,      75,       5,      74,   0,    +127,   0));
+            Params.Add(new FI_Controllers("vcfInInstrument", 7, 0, 71, 5, 70, 0, +127, 0));
+            Params.Add(new FI_Controllers("vcfInDist", 7, 1, 72, 5, 71, 0, +127, 0));
+            Params.Add(new FI_Controllers("vcfInAirDist", 7, 2, 73, 5, 72, 0, +127, 0));
+            Params.Add(new FI_Controllers("vcfInSynth", 7, 3, 74, 5, 73, 0, +127, 64));
+            Params.Add(new FI_Controllers("vcfInNoise", 7, 4, 75, 5, 74, 0, +127, 0));
 
             //FILTER
-            Params.Add(new FI_Controllers("vcfAge",            7,      5,      76,       5,      75,   0,      +1,   1,      "vintage,new"));            //TODO: cambia di vcfFreq vintage 0/80, new 36/122 e porta al valore minimo
-            Params.Add(new FI_Controllers("vcfFreq",           7,      6,      77,       5,      76,   0,    +122, 122));
-            Params.Add(new FI_Controllers("bpfFreq",           7,      7,      78,       5,      77,   0,     +24,   0));
-            Params.Add(new FI_Controllers("vcfEnvFollow",      7,      8,      79,       5,      78,   0,    +127,   0));
-            Params.Add(new FI_Controllers("vcfAccent",         7,      9,      80,       5,      79,   0,    +127,   0));
-            Params.Add(new FI_Controllers("vcfAdAdsr",         7,     10,      81,       5,      80,   0,    +127,   0));
-            Params.Add(new FI_Controllers("vcfPitchFollow",    7,     11,      82,       5,      81,   0,      +1,   0,      "OFF,ON"));
-            Params.Add(new FI_Controllers("vcfType",           8,      0,      83,       5,      82,   0,      +4,   0,      "LPF,HPF,BPF,NTC,OFF"));
-            Params.Add(new FI_Controllers("vcfReso",           8,      1,      84,       5,      83,  +7,    +127,   7,      7));
-            Params.Add(new FI_Controllers("vcfSlope",          8,      2,      85,       5,      84,   0,      +1,   1,      "12db,24db"));
+            Params.Add(new FI_Controllers("vcfAge", 7, 5, 76, 5, 75, 0, +1, 1, "vintage,new"));            //TODO: cambia di vcfFreq vintage 0/80, new 36/122 e porta al valore minimo
+            Params.Add(new FI_Controllers("vcfFreq", 7, 6, 77, 5, 76, 0, +122, 122));
+            Params.Add(new FI_Controllers("bpfFreq", 7, 7, 78, 5, 77, 0, +24, 0));
+            Params.Add(new FI_Controllers("vcfEnvFollow", 7, 8, 79, 5, 78, 0, +127, 0));
+            Params.Add(new FI_Controllers("vcfAccent", 7, 9, 80, 5, 79, 0, +127, 0));
+            Params.Add(new FI_Controllers("vcfAdAdsr", 7, 10, 81, 5, 80, 0, +127, 0));
+            Params.Add(new FI_Controllers("vcfPitchFollow", 7, 11, 82, 5, 81, 0, +1, 0, "OFF,ON"));
+            Params.Add(new FI_Controllers("vcfType", 8, 0, 83, 5, 82, 0, +4, 0, "LPF,HPF,BPF,NTC,OFF"));
+            Params.Add(new FI_Controllers("vcfReso", 8, 1, 84, 5, 83, +7, +127, 7, 7));
+            Params.Add(new FI_Controllers("vcfSlope", 8, 2, 85, 5, 84, 0, +1, 1, "12db,24db"));
 
             //MIDI
-            Params.Add(new FI_Controllers("midiPortatime",     9,      0,      86,       5,      85,   0,    +127,   0));
-            Params.Add(new FI_Controllers("midiPortaSlope",    9,      1,      87,       5,      86,   0,      +1,   0,      "rate,time"));
-            Params.Add(new FI_Controllers("midiPbdRange",      9,      2,      88,       5,      87,   0,     +24,   0));
-            Params.Add(new FI_Controllers("vcosTranspose",     9,      3,      89,       5,      88, -24,     +48,   0));
-            Params.Add(new FI_Controllers("midiKModePortaMode",9,      4,      90,       5,      89,   0,      +3,   0,      "K:gate/P:always,K:trigger/P:always,K:gate/P:legato,K:trigger/P:legato"));
-            Params.Add(new FI_Controllers("midiPbdRange",      9,      5,      91,       5,      90,   0,      +3,   0,      "lower,upper,first,last"));
+            Params.Add(new FI_Controllers("midiPortatime", 9, 0, 86, 5, 85, 0, +127, 0));
+            Params.Add(new FI_Controllers("midiPortaSlope", 9, 1, 87, 5, 86, 0, +1, 0, "rate,time"));
+            Params.Add(new FI_Controllers("midiPbdRange", 9, 2, 88, 5, 87, 0, +24, 0));
+            Params.Add(new FI_Controllers("vcosTranspose", 9, 3, 89, 5, 88, -24, +48, 0));
+            Params.Add(new FI_Controllers("midiKModePortaMode", 9, 4, 90, 5, 89, 0, +3, 0, "K:gate/P:always,K:trigger/P:always,K:gate/P:legato,K:trigger/P:legato"));
+            Params.Add(new FI_Controllers("midiPbdRange", 9, 5, 91, 5, 90, 0, +3, 0, "lower,upper,first,last"));
 
             //LFO
-            Params.Add(new FI_Controllers("lfoFreq",          10,      0,      92,     5,      91,     1,    +127,   1,      1));
-            Params.Add(new FI_Controllers("lfoDelay",         10,      1,      93,     5,      92,     0,    +127,   0));
-            Params.Add(new FI_Controllers("lfoFVcf",          10,      2,      94,     5,      93,     0,    +127,   0));
-            Params.Add(new FI_Controllers("lfoVco",           10,      3,      95,     5,      94,     0,    +127,   0));
+            Params.Add(new FI_Controllers("lfoFreq", 10, 0, 92, 5, 91, 1, +127, 1, 1));
+            Params.Add(new FI_Controllers("lfoDelay", 10, 1, 93, 5, 92, 0, +127, 0));
+            Params.Add(new FI_Controllers("lfoFVcf", 10, 2, 94, 5, 93, 0, +127, 0));
+            Params.Add(new FI_Controllers("lfoVco", 10, 3, 95, 5, 94, 0, +127, 0));
 
             //FLEXIS
             for (int i = 0; i < 4; i++)
             {//TODO: valori iniziali da approfondire
-                Params.Add(new FI_Controllers($"flexi{i + 1}Source",    (11 + i),   0,  (96 + (i * 7)),     5,  (95 + (i * 7)),     0,  +113,   0));    //TODO: no valore 6
-                Params.Add(new FI_Controllers($"flexi{i + 1}Mode",      (11 + i),   1,  (97 + (i * 7)),     5,  (96 + (i * 7)),     0,    +3,   0,  "Quantize,Quantize,Continuous,Continuous"));       //TODO: Quant=0 1 Cont=2 (1° gruppo di param Learn), Quant=1 Cont=3 (2° gruppo)
-                Params.Add(new FI_Controllers($"flexi{i + 1}Learn",     (11 + i),   2,  (98 + (i * 7)),     5,  (97 + (i * 7)),     0,   +94,   0));    //0/94 1° 0/41 2°...TODO: ci sono param non collegabili?                           
-                Params.Add(new FI_Controllers($"flexi{i + 1}Polarity",  (11 + i),   3,  (99 + (i * 7)),     5,  (98 + (i * 7)),     0,    +3,   0));    //0:+, 2:-, 1/3 uguale ma con limit up verso basso
-                Params.Add(new FI_Controllers($"flexi{i + 1}UpLimit",   (11 + i),   4, (100 + (i * 7)),     5,  (99 + (i * 7)),     0,  +128,   0));    //TODO: quando si muove limite sotto si muove della stessa distanza (limiti sopra e sotto variano in base a parametro..si stringe se si sposta il limite sotto (che è quello reale del parametro), valore default valore quando si inserisce controllo)
-                Params.Add(new FI_Controllers($"flexi{i + 1}RangeCtrl", (11 + i),   5, (101 + (i * 7)),     5, (100 + (i * 7)),     0,  +113,   0));                                                    //TODO: no valore 6
-                Params.Add(new FI_Controllers($"flexi{i + 1}Diagram",   (11 + i),   6, (102 + (i * 7)),     5, (101 + (i * 7)),     0,   +16,   0,      -1, 11));
-            }                                                                                                                                           
+                Params.Add(new FI_Controllers($"flexi{i + 1}Source", 11 + i, 0, 96 + i * 7, 5, 95 + i * 7, 0, +113, 0));    //TODO: no valore 6
+                Params.Add(new FI_Controllers($"flexi{i + 1}Mode", 11 + i, 1, 97 + i * 7, 5, 96 + i * 7, 0, +3, 0, "Quantize,Quantize,Continuous,Continuous"));       //TODO: Quant=0 1 Cont=2 (1° gruppo di param Learn), Quant=1 Cont=3 (2° gruppo)
+                Params.Add(new FI_Controllers($"flexi{i + 1}Learn", 11 + i, 2, 98 + i * 7, 5, 97 + i * 7, 0, +94, 0));    //0/94 1° 0/41 2°...TODO: ci sono param non collegabili?                           
+                Params.Add(new FI_Controllers($"flexi{i + 1}Polarity", 11 + i, 3, 99 + i * 7, 5, 98 + i * 7, 0, +3, 0));    //0:+, 2:-, 1/3 uguale ma con limit up verso basso
+                Params.Add(new FI_Controllers($"flexi{i + 1}UpLimit", 11 + i, 4, 100 + i * 7, 5, 99 + i * 7, 0, +128, 0));    //TODO: quando si muove limite sotto si muove della stessa distanza (limiti sopra e sotto variano in base a parametro..si stringe se si sposta il limite sotto (che è quello reale del parametro), valore default valore quando si inserisce controllo)
+                Params.Add(new FI_Controllers($"flexi{i + 1}RangeCtrl", 11 + i, 5, 101 + i * 7, 5, 100 + i * 7, 0, +113, 0));                                                    //TODO: no valore 6
+                Params.Add(new FI_Controllers($"flexi{i + 1}Diagram", 11 + i, 6, 102 + i * 7, 5, 101 + i * 7, 0, +16, 0, -1, 11));
+            }
 
             //FX ORDER
-            Params.Add(new FI_Controllers("eqOdOrder",         15,      0,    124,    6,       0,      0,       +1,  0,      "Od -> Eq,Eq -> Od"));
+            Params.Add(new FI_Controllers("eqOdOrder", 15, 0, 124, 6, 0, 0, +1, 0, "Od -> Eq,Eq -> Od"));
 
             //CHORUS
-            Params.Add(new FI_Controllers("chorusInstrLev",    15,      1,    125,    6,       1,      0,    +127,   0));
-            Params.Add(new FI_Controllers("chorusVcfLev",      15,      2,    126,    6,       2,      0,    +127,   0));
-            Params.Add(new FI_Controllers("chorusOnOff",       16,      0,    127,    6,       3,      0,      +1,   0,      "Off,On"));
-            Params.Add(new FI_Controllers("chorusLfoAFrq",     16,      1,    128,    6,       4,      0,    +127,   0));
-            Params.Add(new FI_Controllers("chorusLfoBFrq",     16,      2,    129,    6,       5,      0,    +127,   0));
-            Params.Add(new FI_Controllers("chorusLevel1",      16,      3,    130,    6,       6,    -64,     +63,   0));
-            Params.Add(new FI_Controllers("chorusDelay1",      16,      4,    131,    6,       7,      0,    +127,   0));
-            Params.Add(new FI_Controllers("chorusMod1A",       16,      5,    132,    6,       8,      0,    +127,   0));
-            Params.Add(new FI_Controllers("chorusMod1B",       16,      6,    133,    6,       9,      0,    +127,   0));
-            Params.Add(new FI_Controllers("chorusLevel2",      16,      7,    134,    6,      10,    -64,     +63,   0));
-            Params.Add(new FI_Controllers("chorusDelay2",      16,      8,    135,    6,      11,      0,    +127,   0));
-            Params.Add(new FI_Controllers("chorusMod2A",       16,      9,    136,    6,      12,      0,    +127,   0));
-            Params.Add(new FI_Controllers("chorusMod2B",       16,     10,    137,    6,      13,      0,    +127,   0));
-            Params.Add(new FI_Controllers("chorusFeedbackLvl", 16,     11,    138,    6,      14,      0,    +127,   0));
-            Params.Add(new FI_Controllers("chorusFeedbackDmp", 16,     12,    139,    6,      15,      0,    +127,   0));
-                                                                                                       
+            Params.Add(new FI_Controllers("chorusInstrLev", 15, 1, 125, 6, 1, 0, +127, 0));
+            Params.Add(new FI_Controllers("chorusVcfLev", 15, 2, 126, 6, 2, 0, +127, 0));
+            Params.Add(new FI_Controllers("chorusOnOff", 16, 0, 127, 6, 3, 0, +1, 0, "Off,On"));
+            Params.Add(new FI_Controllers("chorusLfoAFrq", 16, 1, 128, 6, 4, 0, +127, 0));
+            Params.Add(new FI_Controllers("chorusLfoBFrq", 16, 2, 129, 6, 5, 0, +127, 0));
+            Params.Add(new FI_Controllers("chorusLevel1", 16, 3, 130, 6, 6, -64, +63, 0));
+            Params.Add(new FI_Controllers("chorusDelay1", 16, 4, 131, 6, 7, 0, +127, 0));
+            Params.Add(new FI_Controllers("chorusMod1A", 16, 5, 132, 6, 8, 0, +127, 0));
+            Params.Add(new FI_Controllers("chorusMod1B", 16, 6, 133, 6, 9, 0, +127, 0));
+            Params.Add(new FI_Controllers("chorusLevel2", 16, 7, 134, 6, 10, -64, +63, 0));
+            Params.Add(new FI_Controllers("chorusDelay2", 16, 8, 135, 6, 11, 0, +127, 0));
+            Params.Add(new FI_Controllers("chorusMod2A", 16, 9, 136, 6, 12, 0, +127, 0));
+            Params.Add(new FI_Controllers("chorusMod2B", 16, 10, 137, 6, 13, 0, +127, 0));
+            Params.Add(new FI_Controllers("chorusFeedbackLvl", 16, 11, 138, 6, 14, 0, +127, 0));
+            Params.Add(new FI_Controllers("chorusFeedbackDmp", 16, 12, 139, 6, 15, 0, +127, 0));
+
             //OVERDRIVE                                                                                
-            Params.Add(new FI_Controllers("odState",           17,      0,    140,    6,      16,      0,      +4,   0,      "Off,Instrument,Vcf,Instr+Vcf"));
-            Params.Add(new FI_Controllers("odDrive",           17,      1,    141,    6,      17,      0,    +127,   0));
-            Params.Add(new FI_Controllers("odLevel",           17,      2,    142,    6,      18,     -6,      +6,   0));
+            Params.Add(new FI_Controllers("odState", 17, 0, 140, 6, 16, 0, +4, 0, "Off,Instrument,Vcf,Instr+Vcf"));
+            Params.Add(new FI_Controllers("odDrive", 17, 1, 141, 6, 17, 0, +127, 0));
+            Params.Add(new FI_Controllers("odLevel", 17, 2, 142, 6, 18, -6, +6, 0));
 
             for (int i = 142; i < 152; i++)
             {
-                Params.Add(new FI_Controllers("", 17, (i-142+3), (i+1), 6, (i-142+19), 0, 0, 0));
+                Params.Add(new FI_Controllers("", 17, i - 142 + 3, i + 1, 6, i - 142 + 19, 0, 0, 0));
             }
 
             //EQUALIZATOR
-            Params.Add(new FI_Controllers("eqState",           18,      0,    153,    6,      29,      0,      +4,   0,      "Off,Instrument,Vcf,Instr+Vcf"));
-            Params.Add(new FI_Controllers("eqBassFreq",        18,      1,    154,    6,      30,      0,    +127,   0));
-            Params.Add(new FI_Controllers("eqBassSlope",       18,      2,    155,    6,      31,      0,    +127,   0));
-            Params.Add(new FI_Controllers("eqBassBost",        18,      3,    156,    6,      32,    -20,     +20,   0));
-            Params.Add(new FI_Controllers("eqMid1Frq",         18,      4,    157,    6,      33,      0,    +127,   0));
-            Params.Add(new FI_Controllers("eqMid1Q",           18,      5,    158,    6,      34,     10,    +100,  10,      10));    //10= 1,11=1.1,.... 100 = 10
-            Params.Add(new FI_Controllers("eqMid1Boost",       18,      6,    159,    6,      35,    -20,     +20,   0));             //-20/+20 dB
-            Params.Add(new FI_Controllers("eqMid2Frq",         18,      7,    160,    6,      36,      0,    +127,   0));
-            Params.Add(new FI_Controllers("eqMid2Q",           18,      8,    161,    6,      37,     10,    +100,  10,      10));
-            Params.Add(new FI_Controllers("eqMid2Boost",       18,      9,    162,    6,      38,    -20,     +20,   0));
-            Params.Add(new FI_Controllers("eqTrebleFrq",       18,     10,    163,    6,      39,      0,    +127,   0));
-            Params.Add(new FI_Controllers("eqTrebleSlope",     18,     11,    164,    6,      40,      0,    +127,   0));
-            Params.Add(new FI_Controllers("eqTrebleBoost",     18,     12,    165,    6,      41,    -15,     +20,   0));
+            Params.Add(new FI_Controllers("eqState", 18, 0, 153, 6, 29, 0, +4, 0, "Off,Instrument,Vcf,Instr+Vcf"));
+            Params.Add(new FI_Controllers("eqBassFreq", 18, 1, 154, 6, 30, 0, +127, 0));
+            Params.Add(new FI_Controllers("eqBassSlope", 18, 2, 155, 6, 31, 0, +127, 0));
+            Params.Add(new FI_Controllers("eqBassBost", 18, 3, 156, 6, 32, -20, +20, 0));
+            Params.Add(new FI_Controllers("eqMid1Frq", 18, 4, 157, 6, 33, 0, +127, 0));
+            Params.Add(new FI_Controllers("eqMid1Q", 18, 5, 158, 6, 34, 10, +100, 10, 10));    //10= 1,11=1.1,.... 100 = 10
+            Params.Add(new FI_Controllers("eqMid1Boost", 18, 6, 159, 6, 35, -20, +20, 0));             //-20/+20 dB
+            Params.Add(new FI_Controllers("eqMid2Frq", 18, 7, 160, 6, 36, 0, +127, 0));
+            Params.Add(new FI_Controllers("eqMid2Q", 18, 8, 161, 6, 37, 10, +100, 10, 10));
+            Params.Add(new FI_Controllers("eqMid2Boost", 18, 9, 162, 6, 38, -20, +20, 0));
+            Params.Add(new FI_Controllers("eqTrebleFrq", 18, 10, 163, 6, 39, 0, +127, 0));
+            Params.Add(new FI_Controllers("eqTrebleSlope", 18, 11, 164, 6, 40, 0, +127, 0));
+            Params.Add(new FI_Controllers("eqTrebleBoost", 18, 12, 165, 6, 41, -15, +20, 0));
 
 
             return Params;
@@ -341,7 +339,7 @@ namespace PedalBoardController.Classes.Modules
         //    {
 
         //    }
-            
+
 
         //    if (!sendingFiles)
         //    {
@@ -394,7 +392,7 @@ namespace PedalBoardController.Classes.Modules
         //                {
         //                    sNumberString = "102";
         //                }
-                        
+
 
         //                if (valueString.Contains("-"))
         //                {
@@ -404,7 +402,7 @@ namespace PedalBoardController.Classes.Modules
         //                {
         //                    writer.WriteLine($" {valueString}; field:  {fieldString}poti:  {potiString}ser.no.:  {sNumberString} ");
         //                }
-                        
+
         //            }
         //        }
 
@@ -734,7 +732,7 @@ namespace PedalBoardController.Classes.Modules
         //        data[i] = 0;
         //        i++;
         //    }
-            
+
         //    return data;
         //}
 
@@ -777,7 +775,7 @@ namespace PedalBoardController.Classes.Modules
         //    {
         //        res = 1;
         //    }
-            
+
 
         //    if (res > 0)
         //    {

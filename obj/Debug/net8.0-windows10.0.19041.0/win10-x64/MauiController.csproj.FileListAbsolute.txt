@@ -194,3 +194,4 @@ C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win1
 C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\add.scale-100.png
 C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.dll
 C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.Core.dll
+C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MauiController.sourcelink.json

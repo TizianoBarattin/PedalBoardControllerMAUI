@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
+using MauiController;
 
-namespace PedalBoardController.Classes.Modules
+namespace MauiController.Classes.Modules
 {
     public abstract class Modules
     {
         private static int numOfModules;
         public static int NumOfModules { get { return numOfModules; } }
-
 
         private int moduleIndex;
 
@@ -27,8 +28,11 @@ namespace PedalBoardController.Classes.Modules
         private decimal minMidiChannel = 1;
         private decimal maxMidiChannel = 16;
 
+        public ContentPage ModulePage = new ContentPage();
+        public MainPage MainPage = new MainPage();
+
         //costruttore
-        public Modules(decimal midiChannel, string moduleType, string moduleFriendlyName)
+        public Modules(decimal midiChannel, string moduleType, string moduleFriendlyName, MainPage mainPage)
         {   //TODO: pensare a come gestire la possibilità di rimuovere blocchi che sono in "metà"...switcho il resto?
             if (numOfModules < 10)
             {
@@ -41,10 +45,13 @@ namespace PedalBoardController.Classes.Modules
                 }
 
                 this.moduleType = moduleType;
-                this.moduleFriendlyName = moduleFriendlyName;  
+                this.moduleFriendlyName = moduleFriendlyName;
             }
 
-        } 
+            MainPage = mainPage;
+
+
+        }
 
 
     }

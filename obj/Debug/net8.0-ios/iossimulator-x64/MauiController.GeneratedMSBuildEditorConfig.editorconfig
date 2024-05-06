@@ -40,6 +40,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = MauiController.ModulesSele
 build_metadata.AdditionalFiles.TargetPath = ModulesSelectionPopup.xaml
 build_metadata.AdditionalFiles.RelativePath = ModulesSelectionPopup.xaml
 
+[C:/Users/barat/Pictures/MauiController/Pages/ModulesPages/PageFutureImpactV3.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiController.Pages.ModulesPages.PageFutureImpactV3.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ModulesPages\PageFutureImpactV3.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ModulesPages\PageFutureImpactV3.xaml
+
 [C:/Users/barat/Pictures/MauiController/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MauiController.Resources.Styles.Colors.xaml
@@ -51,9 +57,3 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MauiController.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
-
-[C:/Users/barat/Pictures/MauiController/TestPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = MauiController.TestPage.xaml
-build_metadata.AdditionalFiles.TargetPath = TestPage.xaml
-build_metadata.AdditionalFiles.RelativePath = TestPage.xaml

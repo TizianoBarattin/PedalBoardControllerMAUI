@@ -330,3 +330,5 @@ C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-ios\iossimulator-x64\res
 C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\add.png
 C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-ios\iossimulator-x64\CommunityToolkit.Maui.dll
 C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-ios\iossimulator-x64\CommunityToolkit.Maui.Core.dll
+C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\add.png
+C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-ios\iossimulator-x64\MauiController.sourcelink.json

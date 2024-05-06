@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-04-28T21:32:07.009</Modified>
+      <Modified>2024-05-06T21:12:53.396</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-04-28T21:32:06.897</Modified>
+      <Modified>2024-05-06T21:08:11.776</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MauiController.runtimeconfig.json">
       <PackagePath>MauiController.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MauiController.dll">
       <PackagePath>MauiController.dll</PackagePath>
-      <Modified>2024-04-28T21:32:06.611</Modified>
+      <Modified>2024-05-06T21:12:52.485</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MauiController.exe</PackagePath>
-      <Modified>2024-04-28T21:32:06.616</Modified>
+      <Modified>2024-05-06T21:12:52.531</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\Pictures\MauiController\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -303,7 +303,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MauiController.deps.json">
       <PackagePath>MauiController.deps.json</PackagePath>
-      <Modified>2024-04-28T19:31:13.001</Modified>
+      <Modified>2024-05-06T20:34:57.736</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

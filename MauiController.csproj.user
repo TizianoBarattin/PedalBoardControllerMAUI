@@ -14,7 +14,7 @@
     <MauiXaml Update="ModulesSelectionPopup.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="TestPage.xaml">
+    <MauiXaml Update="Pages\ModulesPages\PageFutureImpactV3.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

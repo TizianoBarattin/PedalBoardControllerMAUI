@@ -7,10 +7,10 @@ using Melanchall.DryWetMidi.Multimedia;
 using Melanchall.DryWetMidi.Core;
 using Melanchall.DryWetMidi.Common;
 
-namespace PedalBoardController.Classes
+namespace MauiController.Classes
 {
     public class MidiInterface
-    { 
+    {
         OutputDevice outputDevice;
         private InputDevice inputDevice;
         bool outputDisposed = true;
@@ -106,7 +106,7 @@ namespace PedalBoardController.Classes
                 inputDisposed = false;
             }
 
-            inputDevice.EventReceived+= OnEventReceived;
+            inputDevice.EventReceived += OnEventReceived;
 
             CancellationTokenSource source = new CancellationTokenSource();
             source.CancelAfter(TimeSpan.FromSeconds(10));
@@ -169,11 +169,11 @@ namespace PedalBoardController.Classes
                         outputDisposed = false;
                     }
 
-                    ControlChangeEvent message = new ControlChangeEvent((SevenBitNumber)controlNumber, (SevenBitNumber)value) 
+                    ControlChangeEvent message = new ControlChangeEvent((SevenBitNumber)controlNumber, (SevenBitNumber)value)
                     {
-                        Channel = (FourBitNumber)(channel-1)    //-1 perché se do come canale 0 la libreria butta fuori messagio su canale 1
+                        Channel = (FourBitNumber)(channel - 1)    //-1 perché se do come canale 0 la libreria butta fuori messagio su canale 1
                     };
-                    
+
                     outputDevice.SendEvent(message);
 
 
@@ -181,7 +181,7 @@ namespace PedalBoardController.Classes
                     {
                         outputDevice.Dispose();
                         outputDisposed = true;
-                        lastOutputDevice= "";
+                        lastOutputDevice = "";
                     }
 
                     return true;
@@ -197,6 +197,6 @@ namespace PedalBoardController.Classes
                 return false;
             }
         }
-        
+
     }
 }

@@ -1,6 +1,6 @@
-﻿using PedalBoardController;
-using PedalBoardController.Classes;
-using PedalBoardController.Classes.Modules;
+﻿using MauiController;
+using MauiController.Classes;
+using MauiController.Classes.Modules;
 using System.Collections.ObjectModel;
 
 namespace MauiController

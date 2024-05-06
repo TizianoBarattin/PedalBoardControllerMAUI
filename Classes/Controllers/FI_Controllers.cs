@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PedalBoardController.Controllers
+namespace MauiController.Classes.Controllers
 {
     public class FI_Controllers
     {
@@ -85,15 +85,15 @@ namespace PedalBoardController.Controllers
 
         public void GestioneGenericaPubblicazioneControllo(string controllerName, int field, int poti, int sNumber, int blocknum, int cc, int minValue, int maxValue, int defaultValue)
         {
-            this.ControllerName = controllerName;
-            this.ActualValue = this.MinValue; //this.DefaultValue = defaultValue; x debug
-            this.MinValue = minValue;
-            this.MaxValue = maxValue;
-            this.CC = cc;
+            ControllerName = controllerName;
+            ActualValue = MinValue; //this.DefaultValue = defaultValue; x debug
+            MinValue = minValue;
+            MaxValue = maxValue;
+            CC = cc;
             this.field = field;
             this.poti = poti;
             this.sNumber = sNumber;
-            this.BlockNum = blocknum;
+            BlockNum = blocknum;
 
         }
 

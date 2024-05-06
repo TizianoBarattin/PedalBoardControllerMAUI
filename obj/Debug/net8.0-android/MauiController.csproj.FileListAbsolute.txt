@@ -1131,3 +1131,7 @@ C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-android\android\assets\C
 C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-android\android\src\crc64159f3caeb1269279\MauiDrawingView.java
 C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-android\android\src\crc64159f3caeb1269279\MauiPopup.java
 C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-android\android\src\crc648fc34c62be8fbbff\Snackbar_SnackbarCallback.java
+C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-android\resizetizer\r\drawable\add.png
+C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-android\lp\166\jl\files.cache
+C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-android\lp\167\jl\files.cache
+C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-android\MauiController.sourcelink.json

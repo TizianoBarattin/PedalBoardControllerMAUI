@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MauiController;
-//using PedalBoardController.Classes.TabPages;
 
-namespace PedalBoardController.Classes.Modules
+namespace MauiController.Classes.Modules
 {
     public class BossES5 : Modules
     {
@@ -15,15 +14,11 @@ namespace PedalBoardController.Classes.Modules
         public const string moduleType = "ES-5 by BOSS";
         public const string relativeFormTabName = "tpBossES5";
 
-        private MainPage MainForm = null;
-
-        public BossES5(MainPage _mainForm, decimal midiChannel, string moduleFriendlyName)
-            : base(midiChannel, moduleType, moduleFriendlyName)
+        public BossES5(MainPage _mainPage, decimal midiChannel, string moduleFriendlyName)
+            : base(midiChannel, moduleType, moduleFriendlyName, _mainPage)
         {
             numOfThisModules++;
-
-            MainForm = _mainForm;
-            //MainForm.AddTabPassedByModule(new tpageBossES5(moduleFriendlyName, Modules.NumOfModules, midiChannel), this);
+            MainPage.AddTabPassedByModule(ModulePage, moduleFriendlyName);
         }
     }
 }

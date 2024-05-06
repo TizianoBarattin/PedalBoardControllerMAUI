@@ -17,18 +17,19 @@
 
 
 
-    <FlyoutItem Title="PedalBoard Controller" FlyoutDisplayOptions="AsMultipleItems">
+    <FlyoutItem Title="PedalBoard Controller" FlyoutDisplayOptions="AsMultipleItems" x:Name="MainPageTab">
         <ShellContent
             Title="Home"
             ContentTemplate ="{DataTemplate local:MainPage}"
             Route="MainPage"
+            x:Name="MainPageFlyoutItem"
             Icon="dotnet_bot.png"/>
-         
-        <ShellContent
+
+        <!--<ShellContent
             Title="test"
             ContentTemplate ="{DataTemplate local:TestPage}"
             Route="MainPage"
-            Icon="add.png"/>
+            Icon="add.png"/>-->
     </FlyoutItem>
 
 </Shell>

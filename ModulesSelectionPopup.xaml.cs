@@ -3,6 +3,7 @@ using CommunityToolkit.Maui.Core.Extensions;
 using CommunityToolkit.Maui.Views;
 using System.Drawing;
 using System.Reflection;
+using Syncfusion.Maui.Core;
 
 namespace MauiController;
 
@@ -47,10 +48,10 @@ public partial class ModulesSelectionPopup : Popup{
             object moduleType = constantField.GetValue(null);
 
             moduleTypesButtons.Add(new Button());
-            moduleTypesString.Add((string)moduleType);
+            moduleTypesString.Add((string)possibleModule.Name);
 
             moduleTypesButtons[i - 100].BorderWidth = 0;
-            //moduleTypesButtons[i - 100]. = possibleModule.Name;
+            moduleTypesButtons[i - 100].StyleId = possibleModule.Name;
             moduleTypesButtons[i - 100].WidthRequest = 300;
             moduleTypesButtons[i - 100].HeightRequest = ButtonHeight;
             moduleTypesButtons[i - 100].ZIndex = i;
@@ -120,7 +121,7 @@ public partial class ModulesSelectionPopup : Popup{
 
         if (SelectedModuleType == "")
         {
-            //CommunityToolkit.Maui.Alerts.Add()
+            
             //DisplayAlert("Alert", "You have been alerted", "OK");
             //MessageBox.Show("Select a module type to add to your pedalboard");
         }
