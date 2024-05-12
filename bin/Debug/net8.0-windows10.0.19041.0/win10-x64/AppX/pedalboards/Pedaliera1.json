@@ -1,0 +1,15 @@
+{
+  "ModuleType": [
+    "FutureImpactV3",
+    "BossES8"
+  ],
+  "ModuleFriendlyName": [
+    "FUTURE IMPACT V3",
+    "ES-8Name"
+  ],
+  "ModuleMidiChannel": [
+    1.0,
+    1.0
+  ],
+  "PedalBoardName": "Pedaliera1"
+}

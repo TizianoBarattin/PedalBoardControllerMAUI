@@ -43,6 +43,7 @@ namespace MauiController.Classes.Modules
 
             ModulePage = new PageFutureImpactV3();
             Channel = midiChannel;
+            MainPage.PedalboardModules.Add(this);
             MainPage.AddTabPassedByModule(ModulePage, moduleFriendlyName);
 
         }

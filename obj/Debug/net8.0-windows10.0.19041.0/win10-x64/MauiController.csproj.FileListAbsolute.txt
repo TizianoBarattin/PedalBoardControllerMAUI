@@ -37,7 +37,6 @@ C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win1
 C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Projection.dll
 C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Projection.dll
 C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
-C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Release.Net.dll
 C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ar\Microsoft.Maui.Controls.resources.dll
 C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ca\Microsoft.Maui.Controls.resources.dll
 C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\cs\Microsoft.Maui.Controls.resources.dll
@@ -179,13 +178,6 @@ C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win1
 C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Melanchall_DryWetMidi_Native64.dll
 C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Melanchall_DryWetMidi_Native64.dylib
 C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Melanchall.DryWetMidi.dll
-C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Syncfusion.Licensing.dll
-C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Syncfusion.Maui.Core.dll
-C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Syncfusion.Maui.DataSource.dll
-C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Syncfusion.Maui.GridCommon.dll
-C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Syncfusion.Maui.Inputs.dll
-C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Syncfusion.Maui.ListView.dll
-C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\en-US\Syncfusion.Maui.ListView.resources.dll
 C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\NAudio.Core.dll
 C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\NAudio.Midi.dll
 C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Commons.Music.Midi.dll
@@ -195,3 +187,5 @@ C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-windows10.0.19041.0\win1
 C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.dll
 C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.Core.dll
 C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MauiController.sourcelink.json
+C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Management.Deployment.Projection.dll
+C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\minus.scale-100.png

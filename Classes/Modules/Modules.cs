@@ -19,12 +19,17 @@ namespace MauiController.Classes.Modules
         public string ModuleType { get { return moduleType; } }
 
         private string moduleFriendlyName;
-        public string ModuleFrienlyName { get { return moduleFriendlyName; } }
+        public string ModuleFriendlyName { get { return moduleFriendlyName; } }
 
         private int tabIndex;
         public int TabIndex { get { return tabIndex; } }
 
-        private decimal midiChannel;
+        private decimal midiChannelSelectedIdx;
+        public decimal MidiChannelSelectedIdx { get { return midiChannelSelectedIdx; } }
+
+        private List<decimal> midiChannels = new List<decimal>();
+        public List<decimal> MidiChannels { get { return midiChannels; } }
+
         private decimal minMidiChannel = 1;
         private decimal maxMidiChannel = 16;
 
@@ -34,6 +39,12 @@ namespace MauiController.Classes.Modules
         //costruttore
         public Modules(decimal midiChannel, string moduleType, string moduleFriendlyName, MainPage mainPage)
         {   //TODO: pensare a come gestire la possibilità di rimuovere blocchi che sono in "metà"...switcho il resto?
+
+            for (int i = 0; i < maxMidiChannel; i++) 
+            {
+                midiChannels.Add(i+1);
+            }
+
             if (numOfModules < 10)
             {
                 moduleIndex = numOfModules;
@@ -41,7 +52,7 @@ namespace MauiController.Classes.Modules
 
                 if (midiChannel >= minMidiChannel && midiChannel <= maxMidiChannel)
                 {
-                    this.midiChannel = midiChannel;
+                    this.midiChannelSelectedIdx = midiChannel-1;
                 }
 
                 this.moduleType = moduleType;

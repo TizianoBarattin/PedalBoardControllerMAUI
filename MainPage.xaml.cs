@@ -9,6 +9,9 @@ using MauiController.Pages.ModulesPages;
 using MauiController.Classes;
 using MauiController.Classes.Configurations;
 using MauiController.Classes.Modules;
+using System.Windows.Input;
+using System.Drawing;
+using System.Security.Cryptography.X509Certificates;
 
 
 namespace MauiController
@@ -27,6 +30,7 @@ namespace MauiController
         public List<string> MidiOutputs = new List<string>();
         public bool startupDone = false;
         const string generalconfigfile = @"\settings\generalsettings.json";
+        const string pedalboardFile = @"\pedalboards\";
         public List<int> midiChannels = new List<int>();
         private bool IsAndroid() => DeviceInfo.Current.Platform == DevicePlatform.Android;
         private bool IsMac() => DeviceInfo.Current.Platform == DevicePlatform.macOS;
@@ -34,6 +38,8 @@ namespace MauiController
 
         //TODO: definire costante per dare max numero di moduli
         public PedalBoardConfig pedalBoardConfig { get; private set; } = new PedalBoardConfig();
+
+        public ObservableCollection<Modules> PedalboardModules { get; private set; }  = new ObservableCollection<Modules>();
 
 
         public MainPage()
@@ -86,7 +92,7 @@ namespace MauiController
             config.MidiOutput = (string)cbMidiOutputs.SelectedItem;
         }
 
-        public void OnMidiInputSelectionChange(object sender, Syncfusion.Maui.Inputs.SelectionChangedEventArgs e)
+        public void OnMidiInputSelectionChange(object sender, EventArgs e)
         {
             if (startupDone)
             {
@@ -94,7 +100,7 @@ namespace MauiController
                 SaveConfig();
             }
         }
-        public void OnMidiOutputSelectionChange(object sender, Syncfusion.Maui.Inputs.SelectionChangedEventArgs e)
+        public void OnMidiOutputSelectionChange(object sender, EventArgs e)
         {
             if (startupDone)
             {
@@ -121,6 +127,58 @@ namespace MauiController
             using (var writer = new StreamWriter(configfile))
             {
                 writer.Write(stringconfigdefault);
+            }
+        }
+
+        public bool SavePedalboard(string pedalboardName)
+        {
+            var dir = GetApplicationDirectoryPath();
+            var configfile = dir + pedalboardFile;
+
+            if (!Directory.Exists(Path.GetDirectoryName(configfile)))
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(configfile));
+            }
+
+            configfile = $"{configfile}{pedalboardName}.json";
+
+            if (!File.Exists(configfile))
+            {
+                //SAVE COMMON SETTINGS
+                JsonSerializerSettings pedalboardFile = new JsonSerializerSettings();
+                pedalboardFile.Formatting = Formatting.Indented;
+                pedalboardFile.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                var stringpedalboarddefault = JsonConvert.SerializeObject(pedalBoardConfig, pedalboardFile);
+                using (var writer = new StreamWriter(configfile))
+                {
+                    writer.Write(stringpedalboarddefault);
+                }
+                return true;
+            }
+            else
+            {
+                //TODO: pop up cambia nome o sovrascrivi
+                return false;
+            }
+
+        }
+
+        public void OpenPedalboard(string pedalboardFile)
+        {
+            string jsonFromFile;
+            try
+            {
+                using (var reader = new StreamReader(pedalboardFile))
+                {
+                    jsonFromFile = reader.ReadToEnd();
+                }
+
+                pedalBoardConfig = null;
+                pedalBoardConfig = JsonConvert.DeserializeObject<PedalBoardConfig>(jsonFromFile);
+            }
+            catch (Exception)
+            {
+                //TODO: messaggio errore
             }
         }
 
@@ -191,6 +249,18 @@ namespace MauiController
                 SaveConfig();
             }
 
+            if (config.PedalBoardFile != null && config.PedalBoardFile != "")
+            {
+                OpenPedalboard(config.PedalBoardFile);
+                if (pedalBoardConfig.ModuleType.Count > 0)
+                {
+                    for (int i = 0; i < pedalBoardConfig.ModuleType.Count; i++)
+                    {
+                        //AddTabPassedByModule()
+                    }
+                }
+            }
+
         }
 
         public void AddModule(Button senderButton, string moduleType, decimal channel, string friendlyName)
@@ -203,6 +273,12 @@ namespace MauiController
             //creo modulo in base a tipo modulo passato da form creazione
             object[] inputs = { this, channel, friendlyName };
             object newModule = Activator.CreateInstance(classType, inputs);
+
+            pedalBoardConfig.ModuleFriendlyName.Add(friendlyName);
+            pedalBoardConfig.ModuleType.Add(moduleType);
+            pedalBoardConfig.ModuleMidiChannel.Add(channel);
+
+            SaveConfig();
         }
 
         public void AddTabPassedByModule(ContentPage newPage, string ModuleName)
@@ -212,9 +288,6 @@ namespace MauiController
 
             AppShell shellApp = Application.Current.MainPage as AppShell;
             shellApp.AddMainFlyoutTab(newPage, ModuleName);
-            //AppShell.MainPageTab.AddLogicalChild(FutureImpactV3Page);
-            //tcMain.TabPages.Add(newTab);
-            //pedalboardModules.Add(newModule);
         }
 
         //private void bRemoveSelected_Click(object sender, EventArgs e)
@@ -255,7 +328,7 @@ namespace MauiController
             {
                 foreach (Modules module in pedalboardModules)
                 {
-                    if (module.ModuleFrienlyName == inputModuleName)
+                    if (module.ModuleFriendlyName == inputModuleName)
                     {
                         ModuleNameFree = false;
                     }
@@ -307,6 +380,27 @@ namespace MauiController
         //{
         //    timeElapsed = true;
         //}
+
+        public void OnCreateNewPedalboardClicked(object sender, EventArgs e)
+        {
+            //TODO
+        }
+        public void OnLoadPedalboardClicked(object sender, EventArgs e)
+        {
+            //TODO
+        }
+        public void OnSavePedalboardClicked(object sender, EventArgs e)
+        {
+            pedalBoardConfig.PedalBoardName = PedalboardName.Text;
+            if (SavePedalboard(PedalboardName.Text))
+            {
+                config.PedalBoardFile = pedalBoardConfig.PedalBoardName;
+                SaveConfig();
+            }
+            
+            
+
+        }
 
     }
 

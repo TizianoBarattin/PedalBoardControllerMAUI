@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Logging;
-using Syncfusion.Maui.Core.Hosting;
 using CommunityToolkit.Maui;
 
 namespace MauiController
@@ -9,7 +8,6 @@ namespace MauiController
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
-            builder.ConfigureSyncfusionCore();
             builder
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()

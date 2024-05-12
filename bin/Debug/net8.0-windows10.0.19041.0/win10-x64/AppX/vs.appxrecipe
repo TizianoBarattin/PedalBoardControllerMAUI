@@ -18,36 +18,36 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
-    <RegisteredManifestChecksum>BA1FFABA2F3154258E0C38BE9A4DE8EE15A01C73ADCE4195CF9AD1335EE29948</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>com.companyname.mauicontroller_1.0.0.1_x64__9zz4h110yvjzm</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>94D63569EB40A43173C77EC99C9E56EEF12D02381796CDA2682529681BDE5557</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>com.companyname.mauicontroller_1.0.0.0_x64__9zz4h110yvjzm</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>com.companyname.mauicontroller_9zz4h110yvjzm!App</RegisteredUserModeAppID>
     <RegisteredPackageID>com.companyname.mauicontroller</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=User Name</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.1</RegisteredVersion>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-05-06T21:12:53.396</Modified>
+      <Modified>2024-05-12T19:45:01.555</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-05-06T21:08:11.776</Modified>
+      <Modified>2024-05-08T21:08:54.711</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MauiController.runtimeconfig.json">
       <PackagePath>MauiController.runtimeconfig.json</PackagePath>
-      <Modified>2024-04-28T19:31:13.098</Modified>
+      <Modified>2024-05-08T20:35:40.097</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MauiController.dll">
       <PackagePath>MauiController.dll</PackagePath>
-      <Modified>2024-05-06T21:12:52.485</Modified>
+      <Modified>2024-05-12T19:45:01.231</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MauiController.exe</PackagePath>
-      <Modified>2024-05-06T21:12:52.531</Modified>
+      <Modified>2024-05-12T19:45:01.235</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\Pictures\MauiController\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -271,23 +271,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-04-28T19:06:56.557</Modified>
+      <Modified>2024-05-08T20:59:33.984</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-04-28T19:06:56.566</Modified>
+      <Modified>2024-05-08T20:59:33.993</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-04-28T19:06:56.578</Modified>
+      <Modified>2024-05-08T20:59:34.005</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-04-28T19:06:56.597</Modified>
+      <Modified>2024-05-08T20:59:34.024</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-04-28T19:06:56.661</Modified>
+      <Modified>2024-05-08T20:59:34.090</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\barat\Pictures\MauiController\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\minus.scale-100.png">
+      <PackagePath>minus.scale-100.png</PackagePath>
+      <Modified>2024-05-08T20:59:31.188</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\melanchall.drywetmidi\7.0.2\build\Melanchall_DryWetMidi_Native32.dll">
       <PackagePath>Melanchall_DryWetMidi_Native32.dll</PackagePath>
@@ -303,7 +307,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\Pictures\MauiController\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MauiController.deps.json">
       <PackagePath>MauiController.deps.json</PackagePath>
-      <Modified>2024-05-06T20:34:57.736</Modified>
+      <Modified>2024-05-08T20:35:40.003</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -369,97 +373,97 @@
       <PackagePath>Microsoft.Extensions.Primitives.dll</PackagePath>
       <Modified>2023-10-31T14:58:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.graphics.win2d\1.0.5.1\lib\net5.0-windows10.0.17763.0\Microsoft.Graphics.Canvas.Interop.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.graphics.win2d\1.2.0\lib\net6.0-windows10.0.19041.0\Microsoft.Graphics.Canvas.Interop.dll">
       <PackagePath>Microsoft.Graphics.Canvas.Interop.dll</PackagePath>
-      <Modified>2023-05-31T20:07:52.000</Modified>
+      <Modified>2024-03-11T15:36:42.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.compatibility\8.0.7\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.dll">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.dll</PackagePath>
       <Modified>2024-02-13T17:13:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.dll">
       <PackagePath>Microsoft.Maui.Controls.dll</PackagePath>
-      <Modified>2024-02-13T17:10:42.000</Modified>
+      <Modified>2024-04-09T15:53:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.xaml\8.0.7\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Xaml.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.xaml\8.0.20\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Xaml.dll">
       <PackagePath>Microsoft.Maui.Controls.Xaml.dll</PackagePath>
-      <Modified>2024-02-13T17:11:08.000</Modified>
+      <Modified>2024-04-09T15:53:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.core\8.0.7\lib\net8.0-windows10.0.19041\Microsoft.Maui.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.core\8.0.20\lib\net8.0-windows10.0.19041\Microsoft.Maui.dll">
       <PackagePath>Microsoft.Maui.dll</PackagePath>
-      <Modified>2024-02-13T17:11:04.000</Modified>
+      <Modified>2024-04-09T15:54:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.essentials\8.0.7\lib\net8.0-windows10.0.19041\Microsoft.Maui.Essentials.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.essentials\8.0.20\lib\net8.0-windows10.0.19041\Microsoft.Maui.Essentials.dll">
       <PackagePath>Microsoft.Maui.Essentials.dll</PackagePath>
-      <Modified>2024-02-13T17:14:08.000</Modified>
+      <Modified>2024-04-09T15:55:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.graphics\8.0.7\lib\net8.0-windows10.0.19041\Microsoft.Maui.Graphics.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.graphics\8.0.20\lib\net8.0-windows10.0.19041\Microsoft.Maui.Graphics.dll">
       <PackagePath>Microsoft.Maui.Graphics.dll</PackagePath>
-      <Modified>2024-02-13T17:11:28.000</Modified>
+      <Modified>2024-04-09T15:55:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.graphics.win2d.winui.desktop\8.0.7\lib\net8.0-windows10.0.19041\Microsoft.Maui.Graphics.Win2D.WinUI.Desktop.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.graphics.win2d.winui.desktop\8.0.20\lib\net8.0-windows10.0.19041\Microsoft.Maui.Graphics.Win2D.WinUI.Desktop.dll">
       <PackagePath>Microsoft.Maui.Graphics.Win2D.WinUI.Desktop.dll</PackagePath>
-      <Modified>2024-02-13T17:13:18.000</Modified>
+      <Modified>2024-04-09T15:55:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.InteractiveExperiences.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\lib\net6.0-windows10.0.18362.0\Microsoft.InteractiveExperiences.Projection.dll">
       <PackagePath>Microsoft.InteractiveExperiences.Projection.dll</PackagePath>
-      <Modified>2023-07-21T16:44:46.000</Modified>
+      <Modified>2024-03-08T03:58:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.WinUI.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\lib\net6.0-windows10.0.18362.0\Microsoft.WinUI.dll">
       <PackagePath>Microsoft.WinUI.dll</PackagePath>
-      <Modified>2023-07-21T22:29:28.000</Modified>
+      <Modified>2024-03-11T10:57:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppLifecycle.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppLifecycle.Projection.dll">
       <PackagePath>Microsoft.Windows.AppLifecycle.Projection.dll</PackagePath>
-      <Modified>2023-07-21T22:29:26.000</Modified>
+      <Modified>2024-03-11T10:57:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppNotifications.Builder.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppNotifications.Builder.Projection.dll">
       <PackagePath>Microsoft.Windows.AppNotifications.Builder.Projection.dll</PackagePath>
-      <Modified>2023-07-21T22:29:26.000</Modified>
+      <Modified>2024-03-11T10:57:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppNotifications.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppNotifications.Projection.dll">
       <PackagePath>Microsoft.Windows.AppNotifications.Projection.dll</PackagePath>
-      <Modified>2023-07-21T22:29:26.000</Modified>
+      <Modified>2024-03-11T10:57:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll">
       <PackagePath>Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll</PackagePath>
-      <Modified>2023-07-21T22:29:26.000</Modified>
+      <Modified>2024-03-11T10:57:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.Resources.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.Resources.Projection.dll">
       <PackagePath>Microsoft.Windows.ApplicationModel.Resources.Projection.dll</PackagePath>
-      <Modified>2023-04-28T12:59:12.000</Modified>
+      <Modified>2024-03-08T18:45:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll">
       <PackagePath>Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll</PackagePath>
-      <Modified>2023-07-21T22:29:26.000</Modified>
+      <Modified>2024-03-11T10:57:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.PushNotifications.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Management.Deployment.Projection.dll">
+      <PackagePath>Microsoft.Windows.Management.Deployment.Projection.dll</PackagePath>
+      <Modified>2024-03-11T10:57:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.PushNotifications.Projection.dll">
       <PackagePath>Microsoft.Windows.PushNotifications.Projection.dll</PackagePath>
-      <Modified>2023-07-21T22:29:26.000</Modified>
+      <Modified>2024-03-11T10:57:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Security.AccessControl.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Security.AccessControl.Projection.dll">
       <PackagePath>Microsoft.Windows.Security.AccessControl.Projection.dll</PackagePath>
-      <Modified>2023-07-21T22:29:26.000</Modified>
+      <Modified>2024-03-11T10:57:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.System.Power.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.System.Power.Projection.dll">
       <PackagePath>Microsoft.Windows.System.Power.Projection.dll</PackagePath>
-      <Modified>2023-07-21T22:29:26.000</Modified>
+      <Modified>2024-03-11T10:57:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.System.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.System.Projection.dll">
       <PackagePath>Microsoft.Windows.System.Projection.dll</PackagePath>
-      <Modified>2023-07-21T22:29:26.000</Modified>
+      <Modified>2024-03-11T10:57:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Widgets.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Widgets.Projection.dll">
       <PackagePath>Microsoft.Windows.Widgets.Projection.dll</PackagePath>
-      <Modified>2023-04-20T18:26:28.000</Modified>
+      <Modified>2024-01-18T21:47:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
-      <Modified>2023-07-21T22:29:26.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Release.Net.dll">
-      <PackagePath>Microsoft.WindowsAppRuntime.Release.Net.dll</PackagePath>
-      <Modified>2023-07-24T19:10:10.000</Modified>
+      <Modified>2024-03-11T10:57:44.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\naudio.core\2.2.1\lib\netstandard2.0\NAudio.Core.dll">
       <PackagePath>NAudio.Core.dll</PackagePath>
@@ -473,229 +477,197 @@
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2023-03-08T07:09:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\syncfusion.licensing\25.1.37\lib\net8.0\Syncfusion.Licensing.dll">
-      <PackagePath>Syncfusion.Licensing.dll</PackagePath>
-      <Modified>2024-03-26T07:28:42.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\syncfusion.maui.core\25.1.37\lib\net8.0-windows10.0.19041.0\Syncfusion.Maui.Core.dll">
-      <PackagePath>Syncfusion.Maui.Core.dll</PackagePath>
-      <Modified>2024-03-25T08:05:20.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\syncfusion.maui.datasource\25.1.37\lib\net8.0-windows10.0.19041.0\Syncfusion.Maui.DataSource.dll">
-      <PackagePath>Syncfusion.Maui.DataSource.dll</PackagePath>
-      <Modified>2024-03-25T08:15:04.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\syncfusion.maui.gridcommon\25.1.37\lib\net8.0-windows10.0.19041.0\Syncfusion.Maui.GridCommon.dll">
-      <PackagePath>Syncfusion.Maui.GridCommon.dll</PackagePath>
-      <Modified>2024-03-25T08:16:24.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\syncfusion.maui.inputs\25.1.37\lib\net8.0-windows10.0.19041.0\Syncfusion.Maui.Inputs.dll">
-      <PackagePath>Syncfusion.Maui.Inputs.dll</PackagePath>
-      <Modified>2024-03-25T08:24:02.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\syncfusion.maui.listview\25.1.37\lib\net8.0-windows10.0.19041.0\Syncfusion.Maui.ListView.dll">
-      <PackagePath>Syncfusion.Maui.ListView.dll</PackagePath>
-      <Modified>2024-03-25T08:17:34.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\ar\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\ar\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ar\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:50.000</Modified>
+      <Modified>2024-04-09T15:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\ca\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\ca\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ca\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:16.000</Modified>
+      <Modified>2024-04-09T15:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\cs\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\cs\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>cs\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:11:16.000</Modified>
+      <Modified>2024-04-09T15:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\da\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\da\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>da\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:11:12.000</Modified>
+      <Modified>2024-04-09T15:53:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\de\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\de\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>de\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:42.000</Modified>
+      <Modified>2024-04-09T15:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\el\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\el\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>el\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:11:16.000</Modified>
+      <Modified>2024-04-09T15:53:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\es\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\es\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>es\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:42.000</Modified>
+      <Modified>2024-04-09T15:53:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\fi\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\fi\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>fi\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:11:10.000</Modified>
+      <Modified>2024-04-09T15:53:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\fr\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\fr\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>fr\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:11:22.000</Modified>
+      <Modified>2024-04-09T15:54:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\he\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\he\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>he\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:52.000</Modified>
+      <Modified>2024-04-09T15:54:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\hi\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\hi\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>hi\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:50.000</Modified>
+      <Modified>2024-04-09T15:53:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\hr\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\hr\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>hr\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:52.000</Modified>
+      <Modified>2024-04-09T15:54:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\hu\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\hu\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>hu\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:11:22.000</Modified>
+      <Modified>2024-04-09T15:53:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\id\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\id\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>id\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:11:20.000</Modified>
+      <Modified>2024-04-09T15:54:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\it\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\it\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>it\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:11:22.000</Modified>
+      <Modified>2024-04-09T15:53:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\ja\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\ja\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ja\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:50.000</Modified>
+      <Modified>2024-04-09T15:53:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\ko\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\ko\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ko\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:50.000</Modified>
+      <Modified>2024-04-09T15:54:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\ms\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\ms\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ms\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:48.000</Modified>
+      <Modified>2024-04-09T15:53:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\nb\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\nb\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>nb\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:52.000</Modified>
+      <Modified>2024-04-09T15:53:38.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\nl\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\nl\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>nl\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:11:20.000</Modified>
+      <Modified>2024-04-09T15:54:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\pl\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\pl\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>pl\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:48.000</Modified>
+      <Modified>2024-04-09T15:54:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\pt-BR\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\pt-BR\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>pt-BR\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:11:22.000</Modified>
+      <Modified>2024-04-09T15:54:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\pt\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\pt\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>pt\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:50.000</Modified>
+      <Modified>2024-04-09T15:54:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\ro\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\ro\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ro\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:20.000</Modified>
+      <Modified>2024-04-09T15:53:38.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\ru\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\ru\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ru\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:22.000</Modified>
+      <Modified>2024-04-09T15:54:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\sk\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\sk\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>sk\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:20.000</Modified>
+      <Modified>2024-04-09T15:54:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\sv\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\sv\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>sv\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:22.000</Modified>
+      <Modified>2024-04-09T15:54:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\th\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\th\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>th\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:48.000</Modified>
+      <Modified>2024-04-09T15:54:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\tr\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\tr\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>tr\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:11:22.000</Modified>
+      <Modified>2024-04-09T15:54:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\uk\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\uk\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>uk\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:11:20.000</Modified>
+      <Modified>2024-04-09T15:54:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\vi\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\vi\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>vi\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:11:24.000</Modified>
+      <Modified>2024-04-09T15:54:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\zh-HK\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\zh-HK\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>zh-HK\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:52.000</Modified>
+      <Modified>2024-04-09T15:54:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\zh-Hans\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\zh-Hans\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>zh-Hans\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:22.000</Modified>
+      <Modified>2024-04-09T15:53:38.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\zh-Hant\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\zh-Hant\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>zh-Hant\Microsoft.Maui.Controls.resources.dll</PackagePath>
-      <Modified>2024-02-13T17:10:50.000</Modified>
+      <Modified>2024-04-09T15:53:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\syncfusion.maui.listview\25.1.37\lib\net8.0-windows10.0.19041.0\en-US\Syncfusion.Maui.ListView.resources.dll">
-      <PackagePath>en-US\Syncfusion.Maui.ListView.resources.dll</PackagePath>
-      <Modified>2024-03-25T08:17:34.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.graphics.win2d\1.0.5.1\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.graphics.win2d\1.2.0\runtimes\win-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
-      <Modified>2023-05-31T20:12:36.000</Modified>
+      <Modified>2024-03-11T15:36:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
-      <Modified>2023-04-28T12:58:40.000</Modified>
+      <Modified>2024-03-08T18:44:10.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.compatibility\8.0.7\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
       <Modified>2024-02-13T17:01:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.7\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.pri">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.controls.core\8.0.20\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.pri">
       <PackagePath>Microsoft.Maui.Controls.pri</PackagePath>
-      <Modified>2024-02-13T17:01:16.000</Modified>
+      <Modified>2024-04-09T15:29:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.core\8.0.7\lib\net8.0-windows10.0.19041\Microsoft.Maui.pri">
+    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\microsoft.maui.core\8.0.20\lib\net8.0-windows10.0.19041\Microsoft.Maui.pri">
       <PackagePath>Microsoft.Maui.pri</PackagePath>
-      <Modified>2024-02-13T17:00:42.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\barat\.nuget\packages\syncfusion.maui.core\25.1.37\lib\net8.0-windows10.0.19041.0\Syncfusion.Maui.Core.pri">
-      <PackagePath>Syncfusion.Maui.Core.pri</PackagePath>
-      <Modified>2024-03-25T08:05:20.000</Modified>
+      <Modified>2024-04-09T15:24:58.000</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.3.msix">
-      <Name>Microsoft.WindowsAppRuntime.1.3</Name>
-      <Version>3000.934.1904.0</Version>
+    <ResolvedSDKReference Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.5.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.5</Name>
+      <Version>5001.70.1338.0</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.3, MinVersion = 3000.934.1904.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.3.msix</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.5, MinVersion = 5001.70.1338.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.5.msix</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.3.msix">
-      <Name>Microsoft.WindowsAppRuntime.1.3</Name>
-      <Version>3000.934.1904.0</Version>
+    <ResolvedSDKReference Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.5.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.5</Name>
+      <Version>5001.70.1338.0</Version>
       <Architecture>win32</Architecture>
-      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.3, MinVersion = 3000.934.1904.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.3.msix</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.5, MinVersion = 5001.70.1338.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.5.msix</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.3.msix">
-      <Name>Microsoft.WindowsAppRuntime.1.3</Name>
-      <Version>3000.934.1904.0</Version>
+    <ResolvedSDKReference Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.5.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.5</Name>
+      <Version>5001.70.1338.0</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.3, MinVersion = 3000.934.1904.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.3.msix</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.5, MinVersion = 5001.70.1338.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.5.msix</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.3.msix">
-      <Name>Microsoft.WindowsAppRuntime.1.3</Name>
-      <Version>3000.934.1904.0</Version>
+    <ResolvedSDKReference Include="C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.5.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.5</Name>
+      <Version>5001.70.1338.0</Version>
       <Architecture>arm64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.3, MinVersion = 3000.934.1904.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.3.msix</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.5, MinVersion = 5001.70.1338.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\barat\.nuget\packages\microsoft.windowsappsdk\1.5.240311000\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.5.msix</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>

@@ -3,7 +3,6 @@ using CommunityToolkit.Maui.Core.Extensions;
 using CommunityToolkit.Maui.Views;
 using System.Drawing;
 using System.Reflection;
-using Syncfusion.Maui.Core;
 
 namespace MauiController;
 

@@ -6,7 +6,6 @@
              Color="White"
              HorizontalOptions="Center"
              x:Name="ModulesSelectionPopupPage"
-             xmlns:control="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
              x:Class="MauiController.ModulesSelectionPopup">
     <VerticalStackLayout Spacing="15" Padding="30" x:Name="PopupVerticalStack">
         <Label 
@@ -18,17 +17,14 @@
 
         <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
             <Label Text="Midi Channel" HeightRequest="40" TextColor="Black" VerticalOptions="Center" ></Label>
-            <control:SfComboBox 
-             x:Name="cbChannel" 
-             HeightRequest="60" 
-             WidthRequest="100" 
-             MaxDropDownHeight="300" 
-             VerticalOptions="Center"
-             DisplayMemberPath="" 
-             TextMemberPath=""
-             Placeholder="Select a Device"
-             IsClearButtonVisible="False">
-            </control:SfComboBox>
+            <Picker
+                x:Name="cbChannel"  
+                TextColor="White"
+                BackgroundColor="grey"
+                FontAutoScalingEnabled="True"
+                HeightRequest="60"
+                WidthRequest="300" >
+            </Picker>
         </HorizontalStackLayout>
 
 

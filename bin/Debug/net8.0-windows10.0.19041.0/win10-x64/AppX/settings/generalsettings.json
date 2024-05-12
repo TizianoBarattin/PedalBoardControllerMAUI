@@ -1,4 +1,5 @@
 {
-  "MidiInput": "StudioRack",
-  "MidiOutput": "Focusrite USB MIDI"
+  "MidiInput": "loopMIDI Port",
+  "MidiOutput": "Focusrite USB MIDI",
+  "PedalBoardFile": "MyPedalboardName444"
 }

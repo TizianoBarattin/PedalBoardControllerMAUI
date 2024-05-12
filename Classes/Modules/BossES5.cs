@@ -18,6 +18,8 @@ namespace MauiController.Classes.Modules
             : base(midiChannel, moduleType, moduleFriendlyName, _mainPage)
         {
             numOfThisModules++;
+
+            MainPage.PedalboardModules.Add(this);
             MainPage.AddTabPassedByModule(ModulePage, moduleFriendlyName);
         }
     }

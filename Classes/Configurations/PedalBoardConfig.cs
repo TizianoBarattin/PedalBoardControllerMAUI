@@ -8,12 +8,12 @@ namespace MauiController.Classes.Configurations
 {
     public class PedalBoardConfig
     {
-        public string PedalBoardConfigName { get; set; }
+        public string PedalBoardName { get; set; }
 
-        public string[] ModuleType = new string[10];
+        public List<string> ModuleType = new List<string>();
 
-        public string[] ModuleFriendlyName = new string[10];
+        public List<string> ModuleFriendlyName = new List<string>();
 
-        public decimal[] ModuleMidiChannel;
+        public List<decimal> ModuleMidiChannel = new List<decimal>();
     }
 }

@@ -1,0 +1,12 @@
+{
+  "ModuleType": [
+    "FutureImpactV3"
+  ],
+  "ModuleFriendlyName": [
+    "FUTURE IMPACT V3"
+  ],
+  "ModuleMidiChannel": [
+    1.0
+  ],
+  "PedalBoardName": "MyPedalboardName333"
+}

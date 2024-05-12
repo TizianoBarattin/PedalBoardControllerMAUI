@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:modules="clr-namespace:MauiController.Classes.Modules"
              x:Class="MauiController.MainPage"
-             x:Name="HomePage"
+             x:Name="HomePage" 
              BindingContext="{x:Reference HomePage}"
              BackgroundColor="WhiteSmoke"
-             xmlns:control="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
              xmlns:local="clr-namespace:MauiController">
 
 
@@ -18,50 +18,79 @@
     <ScrollView> 
         
         <!--MIDI INPUT/OUTPUT SELECTION-->
-        <VerticalStackLayout Padding="30" Spacing="20">
+        <VerticalStackLayout x:Name="StackLayoutHomePage"  Padding="30" Spacing="20">
 
-            <Label Text="General I/O Settings" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" FontSize="25"></Label>
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="40">
+                <Label Text="Pedalboard Configuration: " VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" FontSize="28"></Label>
+                <Entry x:Name="PedalboardName" VerticalOptions="Center" WidthRequest="200" FontSize="18" HeightRequest="60" Text="MyPedalboardName" TextColor="Black" BackgroundColor="WhiteSmoke" ></Entry>
+            </HorizontalStackLayout>
+            
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="30">
+                <Button WidthRequest="150" Clicked="OnCreateNewPedalboardClicked" x:Name="bCreateNewPedalboard" Text="Create New" FontSize="18" ></Button>
+                <Button WidthRequest="100" Clicked="OnSavePedalboardClicked" x:Name="bSavePedalboard" Text="Save" FontSize="18" ></Button>
+                <Button WidthRequest="100" Clicked="OnLoadPedalboardClicked" x:Name="bOpenPedalBoard" Text="Open" FontSize="18" ></Button>
+            </HorizontalStackLayout>
+
+            <Label Text="General I/O Settings" HorizontalOptions="Center" TextColor="Black" VerticalOptions="StartAndExpand" FontSize="28"></Label>
             <HorizontalStackLayout       
                 Padding="30,0"
                 Spacing="5"
                 HorizontalOptions="Center"
                 VerticalOptions="Start">
-
-                    <HorizontalStackLayout Padding="30" Spacing="20" HorizontalOptions="Start">
-                        <Label Text="Midi Input Device" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" FontSize="18">
-                        </Label>
-                        <control:SfComboBox 
+                <HorizontalStackLayout Padding="30" Spacing="20" HorizontalOptions="Start">
+                    <Label Text="Midi Input Device" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" FontSize="18">
+                    </Label>
+                    <Picker
                             x:Name="cbMidiInputs" 
-                            HeightRequest="60" 
-                            WidthRequest="300" 
-                            MaxDropDownHeight="300" 
-                            DisplayMemberPath="" 
-                            TextMemberPath=""
-                            Placeholder="Select a Device"
-                            SelectionChanged="OnMidiInputSelectionChange"
-                            IsClearButtonVisible="True">
-                        </control:SfComboBox>
-                    </HorizontalStackLayout>
+                            TextColor="White"
+                            BackgroundColor="grey"
+                            FontAutoScalingEnabled="True"
+                            HeightRequest="60"
+                            SelectedIndexChanged="OnMidiInputSelectionChange"
+                            WidthRequest="300" >
+                    </Picker>
+                </HorizontalStackLayout>
 
-                    <HorizontalStackLayout Padding="30" Spacing="20">
-                        <Label Text="Midi Output Device" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" FontSize="18">
-                        </Label>
-                        <control:SfComboBox 
+                <HorizontalStackLayout Padding="30" Spacing="20">
+                    <Label Text="Midi Output Device" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" FontSize="18">
+                    </Label>
+                    <Picker
                             x:Name="cbMidiOutputs" 
+                            TextColor="White"
+                            BackgroundColor="Grey"
                             HeightRequest="60" 
-                            WidthRequest="300" 
-                            MaxDropDownHeight="300" 
-                            DisplayMemberPath="" 
-                            TextMemberPath=""
-                            Placeholder="Select a Device"
-                            SelectionChanged="OnMidiOutputSelectionChange"
-                            IsClearButtonVisible="True">
-                        </control:SfComboBox>
-                    </HorizontalStackLayout>
+                            SelectedIndexChanged="OnMidiOutputSelectionChange"
+                            WidthRequest="300" >
+                    </Picker>
+                </HorizontalStackLayout>
             </HorizontalStackLayout>
 
-            <Label Text="Pedalboard Modules" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" FontSize="25"></Label>
-            <ImageButton WidthRequest="200" CornerRadius="10" Padding="10" HeightRequest="50" Clicked="AddModuleClicked" BackgroundColor="LightGreen" Source="add.png" x:Name="AddModuleButton"></ImageButton>
+            <Label Text="Pedalboard Modules" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" FontSize="28"></Label>
+            <CollectionView ItemsSource="{Binding PedalboardModules}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="modules:Modules">
+
+                        <HorizontalStackLayout Padding="30" Spacing="40" HorizontalOptions="Center" x:Name = "StackLayoutModule" IsVisible="True">
+                            <Label Text="{Binding ModuleFriendlyName}" x:Name="LabelModuleName" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" FontSize="23"></Label>
+                            <Label Text="Channel" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" FontSize="20"></Label>
+                            <Picker
+                                ItemsSource="{Binding MidiChannels}"
+                                SelectedIndex="{Binding MidiChannelSelectedIdx}"
+                                x:Name="cbChannel" 
+                                TextColor="White"
+                                BackgroundColor="grey"
+                                FontAutoScalingEnabled="True"
+                                HeightRequest="60"
+                                WidthRequest="150" >
+                            </Picker>
+                            <ImageButton WidthRequest="100" CornerRadius="10" Padding="10" HeightRequest="50" BackgroundColor="OrangeRed" Source="minus.png" x:Name="RemoveModuleButton"></ImageButton>
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <ImageButton WidthRequest="250" CornerRadius="10" Padding="10" HeightRequest="50" Clicked="AddModuleClicked" BackgroundColor="LightGreen" Source="add.png" x:Name="AddModuleButton"></ImageButton>
+
         </VerticalStackLayout>
 
 

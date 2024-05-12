@@ -31,7 +31,8 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/OSSbcTInylPo57oLlANMeMGm6FxRZQ5DfjItwDyfSmYXx6Zpgv/api/v3/index.json": {}
         },
         "frameworks": {
           "net8.0-android34.0": {
@@ -80,7 +81,7 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.7, )"
+              "version": "[8.0.20, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
@@ -99,10 +100,6 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
-            },
-            "Syncfusion.Maui.Inputs": {
-              "target": "Package",
-              "version": "[25.1.37, )"
             },
             "managed-midi": {
               "target": "Package",
@@ -147,7 +144,7 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.7, )"
+              "version": "[8.0.20, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
@@ -166,10 +163,6 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
-            },
-            "Syncfusion.Maui.Inputs": {
-              "target": "Package",
-              "version": "[25.1.37, )"
             },
             "managed-midi": {
               "target": "Package",
@@ -214,7 +207,7 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.7, )"
+              "version": "[8.0.20, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
@@ -233,10 +226,6 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
-            },
-            "Syncfusion.Maui.Inputs": {
-              "target": "Package",
-              "version": "[25.1.37, )"
             },
             "managed-midi": {
               "target": "Package",
@@ -282,7 +271,7 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.7, )"
+              "version": "[8.0.20, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
@@ -295,10 +284,6 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
-            },
-            "Syncfusion.Maui.Inputs": {
-              "target": "Package",
-              "version": "[25.1.37, )"
             },
             "managed-midi": {
               "target": "Package",
