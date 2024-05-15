@@ -1,5 +1,5 @@
 {
   "MidiInput": "loopMIDI Port",
   "MidiOutput": "Focusrite USB MIDI",
-  "PedalBoardFile": "MyPedalboardName444"
+  "PedalBoardFile": "C:\\Users\\barat\\Pictures\\MauiController\\bin\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\AppX\\\\pedalboards\\12345t.json"
 }

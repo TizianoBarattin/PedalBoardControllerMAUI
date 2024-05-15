@@ -34,7 +34,7 @@ namespace MauiController.Classes.Modules
         private decimal maxMidiChannel = 16;
 
         public ContentPage ModulePage = new ContentPage();
-        public MainPage MainPage = new MainPage();
+        public MainPage MainPage = new MainPage(true);
 
         //costruttore
         public Modules(decimal midiChannel, string moduleType, string moduleFriendlyName, MainPage mainPage)

@@ -22,7 +22,7 @@
 
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="40">
                 <Label Text="Pedalboard Configuration: " VerticalTextAlignment="Center" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" FontSize="28"></Label>
-                <Entry x:Name="PedalboardName" VerticalOptions="Center" WidthRequest="200" FontSize="18" HeightRequest="60" Text="MyPedalboardName" TextColor="Black" BackgroundColor="WhiteSmoke" ></Entry>
+                <Entry x:Name="LabelPedalboardName" TextChanged="OnPedalboardLabelChanged" VerticalOptions="Center" WidthRequest="200" FontSize="18" HeightRequest="60" Text="MyPedalboard" TextColor="Black" BackgroundColor="WhiteSmoke" ></Entry> <!--Text="MyPedalboardName"-->
             </HorizontalStackLayout>
             
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="30">

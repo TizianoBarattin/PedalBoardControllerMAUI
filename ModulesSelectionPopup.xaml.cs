@@ -138,7 +138,12 @@ public partial class ModulesSelectionPopup : Popup{
             ///1) dichiara all'interno di Form2 una property Public e WriteOnly dello stesso tipo di Form1 (chiamiamola ParentForm) con relativa variabile privata (chiamiamola m_ParentF)
             ///2) in Form1 subito prima di richiamare Form2 scrivi: Form2.ParentForm = Me
             ///3) dopodiche' in Form2 dovresti tranquillamente poter scrivere:
-            ParentForm.AddModule(lastSelectedButton, GetSelectedModuleType(lastSelectedButton), Convert.ToInt16(cbChannel.SelectedItem), ModuleEntryName.Text);
+            ParentForm.AddModule(lastSelectedButton.StyleId, Convert.ToInt16(cbChannel.SelectedItem), ModuleEntryName.Text);
+            ParentForm.pedalBoardConfig.ModuleFriendlyName.Add(ModuleEntryName.Text);
+            ParentForm.pedalBoardConfig.ModuleType.Add(lastSelectedButton.StyleId);
+            ParentForm.pedalBoardConfig.ModuleMidiChannel.Add(Convert.ToInt16(cbChannel.SelectedItem));
+            ParentForm.PedalBoardIsChanging();
+            ParentForm.SaveConfig();
             this.Close();
         }
     }
