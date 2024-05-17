@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using MauiController;
 
 namespace MauiController.Classes.Modules
@@ -61,6 +62,16 @@ namespace MauiController.Classes.Modules
 
             MainPage = mainPage;
 
+
+        }
+
+
+
+        public ICommand DeleteModuleCommand => new Command<Modules>(OnDeleteModuleClicked);
+        public void OnDeleteModuleClicked(object obj)
+        {
+            obj = obj;
+            //TODO: pop-up sei sicuro
 
         }
 
